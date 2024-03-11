@@ -10,9 +10,9 @@ export class TemplateComponent {
 
   //Agregar valores por defecto al formulario
   usuario = {
-    nombre:'Brigitte',
-    apellido:'Padilla',
-    correo:'brigitte@gmail.com'
+    nombre:'',
+    apellido:'',
+    correo:''
   }
 
   guardar(forma: NgForm){

@@ -10,7 +10,11 @@
                type="text"
                placeholder="Nombre"
                name="nombre"
-               [ngModel]="usuario.nombre">
+               [ngModel]="usuario.nombre"
+               required
+               minlength="5"
+               #nombre="ngModel"
+               [class.is-invalid]="nombre.invalid && nombre.touched">
       </div>
     </div>
 
@@ -21,7 +25,10 @@
                type="text"
                placeholder="Apellido"
                name="apellido"
-               [ngModel]="usuario.apellido">
+               [ngModel]="usuario.apellido"
+               required
+               #apellido="ngModel"
+               [class.is-invalid]="apellido.invalid && apellido.touched">
       </div>
     </div>
   </div>
@@ -33,7 +40,11 @@
              type="email"
              placeholder="Correo electrónico"
              name="correo"
-             [ngModel]="usuario.correo">
+             [ngModel]="usuario.correo"
+             required
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+             #correo="ngModel"
+             [class.is-invalid]="correo.invalid && correo.touched">
     </div>
   </div>
 
