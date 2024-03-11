@@ -8,6 +8,13 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateComponent {
 
+  //Agregar valores por defecto al formulario
+  usuario = {
+    nombre:'Brigitte',
+    apellido:'Padilla',
+    correo:'brigitte@gmail.com'
+  }
+
   guardar(forma: NgForm){
     console.log(forma);
     console.log(forma.value);

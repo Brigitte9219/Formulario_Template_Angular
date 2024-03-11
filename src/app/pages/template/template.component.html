@@ -10,7 +10,7 @@
                type="text"
                placeholder="Nombre"
                name="nombre"
-               ngModel>
+               [ngModel]="usuario.nombre">
       </div>
     </div>
 
@@ -21,7 +21,7 @@
                type="text"
                placeholder="Apellido"
                name="apellido"
-               ngModel>
+               [ngModel]="usuario.apellido">
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@
              type="email"
              placeholder="Correo electrónico"
              name="correo"
-             ngModel>
+             [ngModel]="usuario.correo">
     </div>
   </div>
 
