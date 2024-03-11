@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TemplateComponent {
 
+  guardar(){
+    console.log('Se disparó guardar');
+  }
 }
