@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { PaisService } from './../../services/pais.service';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,13 +7,30 @@ import { NgForm } from '@angular/forms';
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.css']
 })
-export class TemplateComponent {
+export class TemplateComponent implements OnInit{
 
   //Agregar valores por defecto al formulario
   usuario = {
     nombre:'',
     apellido:'',
     correo:''
+  }
+  paises: any[] = [];
+
+  constructor(private paisService:PaisService){
+
+  }
+
+  ngOnInit(): void {
+    this.paisService.getPaises().subscribe(paises => {
+      this.paises = paises;
+      console.log(this.paises);
+
+      this.paises.unshift({
+        nombre:'[Seleccione Pais]',
+        codigo:''
+      })
+    })
   }
 
   guardar(forma: NgForm){
