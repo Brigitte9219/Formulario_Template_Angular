@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-template',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class TemplateComponent {
 
-  guardar(){
-    console.log('Se disparó guardar');
+  guardar(forma: NgForm){
+    console.log(forma);
+    console.log(forma.value);
   }
 }
