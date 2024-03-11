@@ -11,9 +11,10 @@ export class TemplateComponent implements OnInit{
 
   //Agregar valores por defecto al formulario
   usuario = {
-    nombre:'',
-    apellido:'',
-    correo:''
+    nombre:'brigitte',
+    apellido:'padilla',
+    correo:'brigitte@gmail.com',
+    pais:''
   }
   paises: any[] = [];
 
